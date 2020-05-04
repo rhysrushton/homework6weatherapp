@@ -13,112 +13,104 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
         <h1 class="mx-auto text-white">Weather Dashboard</h1>
-    </nav>
-
-    <br>
-
-    <div class ="container-fluid">
-        <div clas="row">
-            <div class="col-md-3">
-                <h3>City</h3>
-                <form class="form-inline"></form>
-                <input type="text" class="form-control-lg mb-2" id="cityInput"/>
-                <button type="button" id="searchBtn" class="btn btn-primary form-control-lg mb-2">
-                </button>
-                <br>
-                <h3>Recent Search</h3>
-                <ul id="recent" class="list-group"></ul>
+      </nav>
+      <br />
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 ">
+            <h3>Search for a city</h3>
+            <form class="form-inline"></form>
+            <input type="text" class=" form-control-lg mb-2" id="cityInput" />
+            <button type="button" id="searchBtn" class="btn btn-primary form-control-lg mb-2">
+              <i class="fa fa-search"></i>
+            </button>
+            </form>
+            <br />
+            <h3>Recent cities</h3>
+            <ul id="recent" class="list-group">
+              
+            </ul>
+          </div>
+          <br>
+          <div class="col-md-9">
+            <div class="card border bg-light">
+              <div class="card-header bg-primary" style=" display:flex;
+              align-items: center;
+              ">
+                <span id="city" class=" bg-primary display-4 text-white">City</span>
+                <img id="icon" src="" />
+              </div>
+              <div class="card-body" style="font-size: 20px">
+                <p>
+                  Local date and time at selected city:
+                  <span id="local"></span>
+                </p>
+                <p id="temperature">Temperature:</p>
+                <p id="humidity">Humidity:</p>
+                <p id="wind">Wind:</p>
+                <p>
+                  UV Index:
+                  <span id="uvi" style="padding: 10px; border-radius: 10px"></span>
+                </p>
+              </div>
             </div>
-            <br>
-            <div class="col-md-9">
-                <div class="card border bg-light">
-                    <div class="card-header bg-primary" style="display:flex; align-items:center;"></div>
-                    <span id="city" class="bg-primary display-4 text-white">City</span>
-                    <img id="icon" src=""/>
-                </div>
-                <div class="card-body" style="font-size: 20px">
-                    <p>
-                        Date and time:
-                        <span id="local"></span>
-                    </p>
-                    <p id="temperature">Temperature:</p>
-                    <p id="humidity">Humidity:</p>
-                    <p id="wind">Wind:</p>
-                    <p>
-                      UV Index:
-                      <span id="uvi" style="padding: 10px; border-radius: 10px"></span>
-                    </p>
-                </div>
-            </div>
-            <br>
-            <p class="display-4">5-Day Forecast</p>
+            <br />
+            <p class="display-4">5-Day Forecast:</p>
             <div class="row">
-            <div class="col">
-            <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                <div class="card-body">
-                <h5 class="card-title date"></h5>
-                <img src="" alt="" class="src">
-                <p class="card-text temperature"></p>
-                <p class="card-text humidity"></p>
+              <div class="col">
+                <div class="card forecast mx-auto bg-primary text-white" data-id="1">
+                  <div class="card-body">
+                    <h5 class="card-title date"></h5>
+                    <img src="" />
+                    <p class="card-text temperature"></p>
+                    <p class="card-text humidity"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card forecast mx-auto bg-primary text-white" data-id="2">
+                  <div class="card-body">
+                    <h5 class="card-title date"></h5>
+                    <img src="" />
+                    <p class="card-text temperature"></p>
+                    <p class="card-text humidity"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card forecast mx-auto bg-primary text-white" data-id="3">
+                  <div class="card-body">
+                    <h5 class="card-title date"></h5>
+                    <img src="" />
+                    <p class="card-text temperature"></p>
+                    <p class="card-text humidity"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card forecast mx-auto bg-primary text-white" data-id="4">
+                  <div class="card-body">
+                    <h5 class="card-title date"></h5>
+                    <img src="" />
+                    <p class="card-text temperature"></p>
+                    <p class="card-text humidity"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card forecast mx-auto bg-primary text-white" data-id="5">
+                  <div class="card-body">
+                    <h5 class="card-title date"></h5>
+                    <img src="" />
+                    <p class="card-text temperature"></p>
+                    <p class="card-text humidity"></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row">
-            <div class="col">
-            <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                <div class="card-body">
-                <h5 class="card-title date"></h5>
-                <img src="" alt="" class="src">
-                <p class="card-text temperature"></p>
-                <p class="card-text humidity"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-            <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                <div class="card-body">
-                <h5 class="card-title date"></h5>
-                <img src="" alt="" class="src">
-                <p class="card-text temperature"></p>
-                <p class="card-text humidity"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-            <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                <div class="card-body">
-                <h5 class="card-title date"></h5>
-                <img src="" alt="" class="src">
-                <p class="card-text temperature"></p>
-                <p class="card-text humidity"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-            <div class="col">
-            <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                <div class="card-body">
-                <h5 class="card-title date"></h5>
-                <img src="" alt="" class="src">
-                <p class="card-text temperature"></p>
-                <p class="card-text humidity"></p>
-            </div>
-          </div>
-        </div>
-
-
-        </div>
-</div>
-
-</div>
-    </div>
-
-
+      </div>
 
 
 
