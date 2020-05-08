@@ -10,107 +10,33 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Weather Forecast</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <h1 class="mx-auto text-white">Weather Dashboard</h1>
-      </nav>
-      <br />
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-3 ">
-            <h3>Search for a city</h3>
-            <form class="form-inline"></form>
-            <input type="text" class=" form-control-lg mb-2" id="cityInput" />
-            <button type="button" id="searchBtn" class="btn btn-primary form-control-lg mb-2">
-              <i class="fa fa-search"></i>
-            </button>
-            </form>
-            <br />
-            <h3>Recent cities</h3>
-            <ul id="recent" class="list-group">
-              
-            </ul>
-          </div>
-          <br>
-          <div class="col-md-9">
-            <div class="card border bg-light">
-              <div class="card-header bg-primary" style=" display:flex;
-              align-items: center;
-              ">
-                <span id="city" class=" bg-primary display-4 text-white">City</span>
-                <img id="icon" src="" />
-              </div>
-              <div class="card-body" style="font-size: 20px">
-                <p>
-                  Local date and time at selected city:
-                  <span id="local"></span>
-                </p>
-                <p id="temperature">Temperature:</p>
-                <p id="humidity">Humidity:</p>
-                <p id="wind">Wind:</p>
-                <p>
-                  UV Index:
-                  <span id="uvi" style="padding: 10px; border-radius: 10px"></span>
-                </p>
-              </div>
-            </div>
-            <br />
-            <p class="display-4">5-Day Forecast:</p>
-            <div class="row">
-              <div class="col">
-                <div class="card forecast mx-auto bg-primary text-white" data-id="1">
-                  <div class="card-body">
-                    <h5 class="card-title date"></h5>
-                    <img src="" />
-                    <p class="card-text temperature"></p>
-                    <p class="card-text humidity"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card forecast mx-auto bg-primary text-white" data-id="2">
-                  <div class="card-body">
-                    <h5 class="card-title date"></h5>
-                    <img src="" />
-                    <p class="card-text temperature"></p>
-                    <p class="card-text humidity"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card forecast mx-auto bg-primary text-white" data-id="3">
-                  <div class="card-body">
-                    <h5 class="card-title date"></h5>
-                    <img src="" />
-                    <p class="card-text temperature"></p>
-                    <p class="card-text humidity"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card forecast mx-auto bg-primary text-white" data-id="4">
-                  <div class="card-body">
-                    <h5 class="card-title date"></h5>
-                    <img src="" />
-                    <p class="card-text temperature"></p>
-                    <p class="card-text humidity"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card forecast mx-auto bg-primary text-white" data-id="5">
-                  <div class="card-body">
-                    <h5 class="card-title date"></h5>
-                    <img src="" />
-                    <p class="card-text temperature"></p>
-                    <p class="card-text humidity"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+<header> 
+  <h1>Weather Dashboard</h1>
+</header>
+
+  <div> 
+        <form action="" class="search">
+          <input type="text", placeholder="Search...", name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <div class="recent">
+          <h1>
+            recent
+          </h1>
+        <div class="cities">
+            <p>cities</p>
         </div>
       </div>
+    </div>
+
+ 
+
+
+
+
+
+
 
 
 
