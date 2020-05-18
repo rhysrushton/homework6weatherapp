@@ -4,7 +4,7 @@ var forecastWeatherSearch = "https://api.openweathermap.org/data/2.5/forecast?q=
 //var uvSearch =  "https://api.openweathermap.org/data/2.5/uvi?"; 
 
 //API Key
-var api = "249525d4c4a0c98c46b32b44ba6865f2"; 
+var apiKey = "249525d4c4a0c98c46b32b44ba6865f2"; 
 
 
 
@@ -22,6 +22,14 @@ $("#searchBtn").on("click", function(){
 function search(){
   var city = $("#citySearch").val(); 
   console.log(city)
+
+  var request = $.ajax({
+    url: currentWeatherSearch + city + "&appid=" + apiKey + "&units=metric",
+    method: "GET"
+  })
+  request.done(function(call){
+    console.log(call)
+  })
 }
 
 
