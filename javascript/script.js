@@ -16,9 +16,13 @@ $(document).ready(function(){
 $("#searchBtn").on("click", function(){
   event.preventDefault(); 
   console.log(" click")
+  search();
 }); 
 
-
+function search(){
+  var city = $("#citySearch").val(); 
+  console.log(city)
+}
 
 
 
