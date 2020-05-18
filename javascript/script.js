@@ -22,15 +22,23 @@ $("#searchBtn").on("click", function(){
 function search(){
   var city = $("#citySearch").val(); 
   console.log(city)
-
+//AJAX request for current weather. 
   var request = $.ajax({
     url: currentWeatherSearch + city + "&appid=" + apiKey + "&units=metric",
     method: "GET"
   })
   request.done(function(call){
     console.log(call)
+  }) .then(function(response){
+    let recentSearch = {};
+    recentSearch.city = response.name;
+    recentSearch.country = response.sys.country; 
+    console.log(recentSearch)
   })
-}
+
+
+
+} ///forSearch function
 
 
 
@@ -50,7 +58,7 @@ function search(){
 
 
 
-})
+})//document.ready
 
 
 
