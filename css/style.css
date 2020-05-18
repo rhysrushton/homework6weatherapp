@@ -14,7 +14,6 @@ form.search button {
     cursor: pointer;
   }
 
-
   .current{
     float: right; 
     border: 3px solid green;
@@ -22,7 +21,6 @@ form.search button {
    right: 600px; 
    
   }
-
 
   .fiveDay{
     clear: both;
@@ -34,3 +32,4 @@ form.search button {
     display: flex;  
     flex-wrap: wrap;
   }
+
