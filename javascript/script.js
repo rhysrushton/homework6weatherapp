@@ -42,7 +42,10 @@ function search(){
       "src",
       "http://openweathermap.org/img/wn/" + img + ".png"
     );
-    
+    $("#dateAndTime").text("Local Time & Date: " + dateAndTime);
+    $("#temp").text("The current temperature in" + `${recentSearch.city}` + "is" + response.main.temp.toFixed(0) + "C");
+
+
   })
 
 
