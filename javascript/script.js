@@ -46,6 +46,13 @@ function search(){
     $("#temp").text("The current temperature in" + `${recentSearch.city}` + "is" + response.main.temp.toFixed(0) + "C");
     $("#humidity").text("The Humdity is:" + response.main.humidity + "%");
     $("#wind").text("The Wind speed is: " + response.wind.speed + "m/sec");
+  }); 
+  var requestForecast = $.ajax({
+    url: forecastWeatherSearch + city + "&appid=" + apiKey + "&units=metric",
+    method: "GET"
+  }) 
+  requestForecast.done(function(call){
+    console.log(call)
   })
 
 

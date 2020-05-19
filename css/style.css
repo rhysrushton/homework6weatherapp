@@ -24,7 +24,9 @@ form.search button {
 
   /* need to fix this */ 
   .current img{
-    align-content: center;
+    background-color: cornflowerblue;
+    opacity: 50%;
+   
   }
 
   .fiveDay{
