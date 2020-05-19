@@ -22,6 +22,11 @@ form.search button {
    
   }
 
+  /* need to fix this */ 
+  .current img{
+    align-content: center;
+  }
+
   .fiveDay{
     clear: both;
     text-align: center; 

@@ -34,6 +34,15 @@ function search(){
     recentSearch.city = response.name;
     recentSearch.country = response.sys.country; 
     console.log(recentSearch)
+    let coordinates = response.coordinates; 
+    let img = response.weather[0].icon 
+    let dateAndTime = moment().utc().add(response.timezone).format("ddd, MMM Do HH:mm");
+    $("#city").text("City: " + response.name + "," + response.sys.country);
+    $("#icon").attr(
+      "src",
+      "http://openweathermap.org/img/wn/" + img + ".png"
+    );
+    
   })
 
 
