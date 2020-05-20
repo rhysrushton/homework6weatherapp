@@ -66,10 +66,11 @@ function search(){
       forecastObj.icon = response.list[i].weather[0].icon;
       forecastInfo.push(forecastObj)
       console.log(forecastInfo)
-    }
-
-    
+    } 
+    for(let i = 1; i <=5; i++){}
   })
+
+
 
 
 
