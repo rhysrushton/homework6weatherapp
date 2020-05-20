@@ -47,31 +47,14 @@ function search(){
     $("#humidity").text("The Humdity is:" + response.main.humidity + "%");
     $("#wind").text("The Wind speed is: " + response.wind.speed + "m/sec");
   }); 
-  //AJAX Request for forecast
-  var requestForecast = $.ajax({
-    url: forecastWeatherSearch + city + "&appid=" + apiKey + "&units=metric",
-    method: "GET"
-  }) 
-  requestForecast.done(function(call){
-    console.log(call)
-  }).then(function(response){
-    let forecastInfo = [];
-    for(let i = 0; i < response.list.length; i++) {
-      let forecastObj = {};
-      forecastObj.date = moment(
-        (response.list[i].dt + response.city.timezone) * 1000
-      ).utc().format("DD/MM/YYYY");
-      forecastObj.temp = response.list[i].main.temp;
-      forecastObj.humidity = response.list[i].main.humidity;
-      forecastObj.icon = response.list[i].weather[0].icon;
-      forecastInfo.push(forecastObj)
-      console.log(forecastInfo)
-    } 
-    for(let i = 1; i <=5; i++){}
-  })
 
-
-
+var requestForecast = $.ajax({
+  url: forecastWeatherSearch + city + "&appid=" + apiKey + "&units=metric",
+  method: "GET"
+}) 
+requestForecast.done(function(call){
+  console.log(call)
+})
 
 
 } ///forSearch function
