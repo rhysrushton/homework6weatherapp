@@ -65,8 +65,10 @@ function search(){
       forecastObj.humidity = response.list[i].main.humidity;
       forecastObj.icon = response.list[i].weather[0].icon;
       forecastInfo.push(forecastObj)
-      
+      console.log(forecastInfo)
     }
+
+    
   })
 
 
