@@ -6,9 +6,6 @@ var forecastWeatherSearch = "https://api.openweathermap.org/data/2.5/forecast?q=
 //API Key
 var apiKey = "249525d4c4a0c98c46b32b44ba6865f2"; 
 
-
-
-
 //Search event listener. 
 $(document).ready(function(){
 
@@ -16,11 +13,13 @@ $(document).ready(function(){
 $("#searchBtn").on("click", function(){
   event.preventDefault(); 
   console.log(" click")
+ 
   search();
 }); 
 
 function search(){
   var city = $("#citySearch").val(); 
+  localStorage.setItem("City", city)
   console.log(city)
 //AJAX request for current weather. 
   var request = $.ajax({
@@ -82,40 +81,34 @@ requestForecast.done(function(call){
         console.log(tempArray)
         console.log(dateArray)
     };
- 
   };
-
   for (let i = 0; i <dateArray.length; i++) {
 
 
     var newDate = $("<p>").html("Date: " + dateArray[i]);
     $(".forecast[data-id="+ i +"]" ).append(newDate);  
 
-  var newHumidity = $("<p>").html("Humidity:" + humidityArray[i]);
-  $(".forecast[data-id="+ i +"]" ).append(newHumidity); 
-  console.log(humidityArray)
+    var newHumidity = $("<p>").html("Humidity:" + humidityArray[i]);
+    $(".forecast[data-id="+ i +"]" ).append(newHumidity); 
+    console.log(humidityArray)
 
 
-  var newTemp = $("<p>").html("Temperature:" + tempArray[i]);
-  $(".forecast[data-id="+ i +"]" ).append(newTemp);  
+    var newTemp = $("<p>").html("Temperature:" + tempArray[i]);
+    $(".forecast[data-id="+ i +"]" ).append(newTemp);  
 
-  var newImg = $("<img>");
-  newImg.attr("src",  "http://openweathermap.org/img/wn/" + iconArray[i] + "@2x.png")
-  $(".forecast[data-id="+ i +"]" ).append(newImg); 
-
-
-
-  }
- 
-
-
+    var newImg = $("<img>");
+    newImg.attr("src",  "http://openweathermap.org/img/wn/" + iconArray[i] + "@2x.png")
+    $(".forecast[data-id="+ i +"]" ).append(newImg); 
+    }
 })
+
+
+
 
 
 } ///forSearch function
 
-
-
+//for saving data
 
 
 
