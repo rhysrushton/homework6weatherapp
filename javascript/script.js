@@ -19,7 +19,8 @@ $("#searchBtn").on("click", function(){
 
 function search(){
   var city = $("#citySearch").val(); 
-  localStorage.setItem("City", city)
+  localStorage.setItem("City", city);
+  $("#City").empty().append(localStorage.getItem("City"))
   console.log(city)
 //AJAX request for current weather. 
   var request = $.ajax({
