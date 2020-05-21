@@ -61,6 +61,7 @@ requestForecast.done(function(call){
   var iconArray = [];
   var tempArray = [];
   var humidityArray = []; 
+  var div = $(".forecast[data-id="+ i +"]" ); 
   for(var i=1; i < 40; i++){
     var option = response.list[i].dt_txt.substring(11);
    // console.log(option)
@@ -71,31 +72,40 @@ requestForecast.done(function(call){
     if("15:00:00" == option && dateValue != currentDate){
       var dateString = response.list[i].dt_txt.substring("0,10");
       var date = new moment(dateString)
-      var formatDate = date.format("MM/DD/YYYY")
+      var formatDate = date.format("DD/MM/YYYY")
       dateArray.push(formatDate);
       iconArray.push(response.list[i].weather[0].icon);
       tempArray.push(response.list[i].main.temp);
       humidityArray.push(response.list[i].main.humidity);
-console.log(humidityArray)
-console.log(iconArray)
-console.log(tempArray)
-console.log(dateArray)
+        console.log(humidityArray)
+        console.log(iconArray)
+        console.log(tempArray)
+        console.log(dateArray)
     };
  
   };
 
+  for (let i = 0; i <dateArray.length; i++) {
 
-  var newHumidity = $("<p>").html("Humidity:");
-  $(".forecast").append(newHumidity); 
 
-  var newTemp = $("<p>").html("Temperature:");
-  $(".forecast").append(newTemp);  
+    var newDate = $("<p>").html("Date: " + dateArray[i]);
+    $(".forecast[data-id="+ i +"]" ).append(newDate);  
 
-  var newImg = $("<p>").html("Icon:");
-  $(".forecast").append(newImg); 
+  var newHumidity = $("<p>").html("Humidity:" + humidityArray[i]);
+  $(".forecast[data-id="+ i +"]" ).append(newHumidity); 
+  console.log(humidityArray)
 
-  var newDate = $("<p>").html("Date:");
-  $(".forecast").append(newDate);  
+
+  var newTemp = $("<p>").html("Temperature:" + tempArray[i]);
+  $(".forecast[data-id="+ i +"]" ).append(newTemp);  
+
+  var newImg = $("<img>");
+  newImg.attr("src",  "http://openweathermap.org/img/wn/" + iconArray[i] + "@2x.png")
+  $(".forecast[data-id="+ i +"]" ).append(newImg); 
+
+
+
+  }
  
 
 
