@@ -1,3 +1,10 @@
+body{
+  background-image: linear-gradient(blue, whitesmoke) ;
+}
+
+html{
+  background-image: linear-gradient(whitesmoke, blue) ;
+}
 header{
     text-align: center;
 }
@@ -16,7 +23,7 @@ form.search button {
 
   .current{
     float: right; 
-    border: 3px solid green;
+   
     position: relative;
    right: 600px; 
    
@@ -24,7 +31,7 @@ form.search button {
 
   /* need to fix this */ 
   .current img{
-    background-color: cornflowerblue;
+    
     opacity: 50%;
    
   }
@@ -34,9 +41,14 @@ form.search button {
     text-align: center; 
     margin: auto;
     width: 50%;
-    border: 3px solid green;
+  
     padding: 10px;
     display: flex;  
     flex-wrap: wrap;
+  }
+
+  h1, p, li{
+    color: black;
+
   }
 
